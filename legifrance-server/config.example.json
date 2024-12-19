@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "legifrance-server": {
+      "command": "node",
+      "args": ["chemin/vers/legifrance-server/build/index.js"],
+      "env": {
+        "LEGIFRANCE_CLIENT_ID": "votre_client_id",
+        "LEGIFRANCE_CLIENT_SECRET": "votre_client_secret", 
+        "LEGIFRANCE_API_KEY": "votre_api_key",
+        "LEGIFRANCE_OAUTH_SECRET": "votre_oauth_secret",
+        "LEGIFRANCE_API_URL": "https://sandbox-api.piste.gouv.fr/dila/legifrance/lf-engine-app",
+        "OAUTH_TOKEN_URL": "https://sandbox-oauth.piste.gouv.fr/api/oauth/token"
+      }
+    }
+  }
+}

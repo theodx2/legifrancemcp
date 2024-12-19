@@ -1,0 +1,44 @@
+{
+  "name": "mcp-server-legifrance",
+  "version": "0.1.0",
+  "description": "Un serveur MCP (Model Context Protocol) pour interagir avec l'API Légifrance",
+  "license": "MIT",
+  "author": {
+    "name": "Théo DESROUSSEAUX",
+    "email": "theo.desrousseaux@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theodesro/mcp-server-legifrance.git"
+  },
+  "keywords": [
+    "mcp",
+    "legifrance",
+    "api",
+    "claude",
+    "law",
+    "legal",
+    "france"
+  ],
+  "type": "module",
+  "bin": {
+    "legifrance-server": "./build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc && xcopy /E /I /Y src\\specs build\\specs && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "inspector": "npx @modelcontextprotocol/inspector build/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "0.6.0",
+    "axios": "^1.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "typescript": "^5.3.3"
+  }
+}
